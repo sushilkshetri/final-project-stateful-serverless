@@ -1,4 +1,4 @@
-# Runs on every pull request. Replace the placeholder step with real tests later.
+# Runs the Go tests on every pull request.
 name: ci
 
 on:
@@ -10,5 +10,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder
-        run: echo "TODO - replace with npm ci and npm test"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go vet ./...
+      - run: go test ./...

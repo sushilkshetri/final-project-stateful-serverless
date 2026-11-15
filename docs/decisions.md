@@ -3,7 +3,7 @@
 Write down each choice and why, so the report can explain it.
 
 ## Language
-TODO
+Go on both sides. Same language and Lambda runtime for both, so language is not a variable.
 
 ## How a function finds an object's owner
 TODO

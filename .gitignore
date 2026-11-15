@@ -1,8 +1,11 @@
-# dependencies
-node_modules/
-
 # secrets
 .env
+
+# build output
+bin/
+dist/
+bootstrap
+*.zip
 
 # terraform
 .terraform/
@@ -11,10 +14,7 @@ node_modules/
 *.tfplan
 .terraform.lock.hcl
 
-# build output
-dist/
-
-# python
+# python (Locust, analysis)
 __pycache__/
 .venv/
 .ipynb_checkpoints/

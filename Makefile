@@ -1,9 +1,10 @@
-# One command per step. Each target is a placeholder for now.
+# One command per step. Most targets are placeholders for now.
 
-.PHONY: help test deploy-stateful deploy-stateless seed run check teardown
+.PHONY: help test build deploy-stateful deploy-stateless seed run check teardown
 
 help:
-	@echo "make test                              unit tests for shared rules"
+	@echo "make test                              go test ./..."
+	@echo "make build                             build the Lambdas and the owner node"
 	@echo "make deploy-stateful                   deploy the stateful side (Lambda + owner node)"
 	@echo "make deploy-stateless                  deploy the baseline (Lambda + DynamoDB)"
 	@echo "make seed                              fresh events, rooms, counters"
@@ -12,7 +13,10 @@ help:
 	@echo "make teardown                          remove AWS resources"
 
 test:
-	@echo "TODO: run unit tests"
+	go test ./...
+
+build:
+	@echo "TODO: build each cmd/*-fn as a Lambda bootstrap binary, and the owner node image"
 
 deploy-stateful:
 	./scripts/deploy-stateful.sh
@@ -21,13 +25,13 @@ deploy-stateless:
 	./scripts/deploy-stateless.sh
 
 seed:
-	@echo "TODO: run scripts/seed.ts"
+	go run ./scripts/seed
 
 run:
 	./experiments/scripts/run.sh $(EXP) $(TARGET)
 
 check:
-	@echo "TODO: run experiments/scripts/check_correctness.ts $(EXP) $(TARGET)"
+	go run ./experiments/scripts/check $(EXP) $(TARGET)
 
 teardown:
 	./scripts/teardown.sh
