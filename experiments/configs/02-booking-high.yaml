@@ -1,0 +1,8 @@
+# Test 2: booking, high contention (one event)
+# TODO: fill in values
+target:        # stateful | stateless
+users:
+spawn_rate:
+duration:
+warmup:
+runs: 3

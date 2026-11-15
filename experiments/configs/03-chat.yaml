@@ -1,0 +1,8 @@
+# Test 3: chat broadcast (room sizes 10, 100, 500)
+# TODO: fill in values
+target:        # stateful | stateless
+users:
+spawn_rate:
+duration:
+warmup:
+runs: 3

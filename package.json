@@ -1,0 +1,11 @@
+{
+  "name": "final-project-stateful-serverless",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "stateful",
+    "stateless",
+    "loadtest/chat"
+  ]
+}

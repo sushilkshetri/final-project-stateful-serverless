@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# secrets
+.env
+
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+
+# build output
+dist/
+
+# python
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+
+# os / editors
+.DS_Store
+.vscode/
+.idea/

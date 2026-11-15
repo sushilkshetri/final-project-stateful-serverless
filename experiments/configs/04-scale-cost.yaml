@@ -1,0 +1,8 @@
+# Test 4: many independent objects + cost
+# TODO: fill in values
+target:        # stateful | stateless
+users:
+spawn_rate:
+duration:
+warmup:
+runs: 3

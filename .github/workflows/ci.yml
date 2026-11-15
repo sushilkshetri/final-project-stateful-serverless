@@ -1,0 +1,14 @@
+# Runs on every pull request. Replace the placeholder step with real tests later.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: echo "TODO - replace with npm ci and npm test"
